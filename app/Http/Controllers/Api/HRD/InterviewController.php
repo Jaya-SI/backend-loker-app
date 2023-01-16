@@ -72,7 +72,7 @@ class InterviewController extends Controller
         } else {
             return response()->json([
                 'success' => false,
-                'message' => 'Gagal menghapus data interview',
+                'message' => 'Tidak bisa menghapus data interview',
                 'data' => ''
             ], 400);
         }
