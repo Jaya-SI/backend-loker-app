@@ -13,6 +13,7 @@ class Interview extends Model
         'id_seleksi',
         'id_hrd',
         'id_pelamar',
+        'id_loker',
         'jadwal',
         'token',
         'keterangan',

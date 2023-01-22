@@ -13,6 +13,7 @@ class Seleksi extends Model
         'id_pelamar',
         'id_loker',
         'surat_lamaran',
+        'token',
         'status',
         'keterangan',
     ];

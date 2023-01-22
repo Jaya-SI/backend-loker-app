@@ -89,15 +89,17 @@ class SeleksiController extends Controller
     public function updateSeleksi(Request $request, $id)
     {
         $seleksi = Seleksi::find($id);
+        $data = $request->all();
 
         if ($seleksi) {
-            $seleksi->update([
-                'id_pelamar' => $request->id_pelamar,
-                'id_loker' => $request->id_loker,
-                'surat_lamaran' => $request->surat_lamaran,
-                'status' => $request->status,
-                'keterangan' => $request->keterangan,
-            ]);
+            // $seleksi->update([
+            //     'id_pelamar' => $request->id_pelamar,
+            //     'id_loker' => $request->id_loker,
+            //     'surat_lamaran' => $request->surat_lamaran,
+            //     'status' => $request->status,
+            //     'keterangan' => $request->keterangan,
+            // ]);
+            $seleksi->update($data);
 
             return response()->json([
                 'success' => true,

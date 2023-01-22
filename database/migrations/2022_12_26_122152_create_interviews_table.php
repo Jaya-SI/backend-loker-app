@@ -19,10 +19,11 @@ return new class extends Migration
             $table->unsignedBigInteger('id_seleksi');
             $table->unsignedBigInteger('id_hrd');
             $table->unsignedBigInteger('id_pelamar');
+            $table->unsignedBigInteger('id_loker');
             $table->string('jadwal');
             $table->text('token')->nullable();
             $table->text('keterangan')->nullable();
-            $table->enum('status', ['diterima', 'ditolak', 'pending'])->default('pending');
+            $table->enum('status', ['Diterima', 'Ditolak', 'Interview'])->default('Interview');
 
             //relasi ke tabel seleksi
             $table->foreign('id_seleksi')->references('id')->on('seleksis');
@@ -30,6 +31,8 @@ return new class extends Migration
             $table->foreign('id_hrd')->references('id')->on('hrds');
             //relasi ke tabel pelamar
             $table->foreign('id_pelamar')->references('id')->on('pelamars');
+            //relasi ke table loker
+            $table->foreign('id_loker')->references('id')->on('lokers');
 
             $table->timestamps();
         });
