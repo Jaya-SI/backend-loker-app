@@ -138,6 +138,9 @@ Route::prefix('hrd')->group(function(){
 
     //checkPelamarInterview
     Route::get('/check-pelamar-interview/{id}', [App\Http\Controllers\Api\HRD\InterviewController::class, 'checkPelamarInterview', ['as' => 'hrd']]);
+
+    //getIdSeleksiThereisInInterview
+    Route::get('/get-id-seleksi-interview/{id}', [App\Http\Controllers\Api\HRD\InterviewController::class, 'getIdSeleksiThereisInInterview', ['as' => 'hrd']]);
 });
 
 

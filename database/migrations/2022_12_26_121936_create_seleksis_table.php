@@ -19,7 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_pelamar');
             $table->unsignedBigInteger('id_loker');
             $table->text('surat_lamaran')->nullable();
-            $table->enum('status', ['seleksi', 'interview'])->default('seleksi');
+            $table->text('token')->nullable();
+            $table->enum('status', ['Seleksi', 'Lolos Seleksi', 'Ditolak'])->default('Seleksi');
             $table->text('keterangan')->nullable();
 
             //relasi ke tabel pelamar

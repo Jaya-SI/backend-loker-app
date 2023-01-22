@@ -15,6 +15,7 @@ class SeleksiController extends Controller
             'id_pelamar' => $request->id_pelamar,
             'id_loker' => $request->id_loker,
             'surat_lamaran' => $request->surat_lamaran,
+            'token' => $request->token,
             'status' => $request->status,
             'keterangan' => $request->keterangan,
         ]);
